@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function() {
             })
           })
           break
-        case '2': //call recording AUTO/ON/OFF
+        case '4': //call recording AUTO/ON/OFF
           if(enableCallRecordingActions) {
             Wallace.getSystemSetting('callrecording.mode', function(curMode) {
               var nextMode = 'on'
@@ -99,7 +99,7 @@ window.addEventListener('DOMContentLoaded', function() {
             actionLock = false
           }
           break
-        case '4': //override TTL
+        case '2': //override TTL
           actionLock = true
           var newTTL = parseInt(window.prompt('New TTL value', 64))
           if(newTTL && newTTL < 256) {
