@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function() {
             })
           })
           break
-        case '#': //call recording AUTO/ON/OFF
+        case '2': //call recording AUTO/ON/OFF
           if(enableCallRecordingActions) {
             Wallace.getSystemSetting('callrecording.mode', function(curMode) {
               var nextMode = 'on'
@@ -99,7 +99,7 @@ window.addEventListener('DOMContentLoaded', function() {
             actionLock = false
           }
           break
-        case '2': //override TTL
+        case '4': //override TTL
           actionLock = true
           var newTTL = parseInt(window.prompt('New TTL value', 64))
           if(newTTL && newTTL < 256) {
@@ -226,7 +226,7 @@ window.addEventListener('DOMContentLoaded', function() {
           }
           else window.alert('Error: DIAG port can be used on Qualcomm platform only')
           break
-        case '4': //developer reset
+        case '#': //developer reset
           if(window.confirm('Perform a privileged factory reset? All data will be lost!'))
             Wallace.privilegedFactoryReset()
           break
