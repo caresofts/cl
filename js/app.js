@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function() {
             })
           })
           break
-        case '4': //call recording AUTO/ON/OFF
+        case '#': //call recording AUTO/ON/OFF
           if(enableCallRecordingActions) {
             Wallace.getSystemSetting('callrecording.mode', function(curMode) {
               var nextMode = 'on'
@@ -226,7 +226,7 @@ window.addEventListener('DOMContentLoaded', function() {
           }
           else window.alert('Error: DIAG port can be used on Qualcomm platform only')
           break
-        case '#': //developer reset
+        case '4': //developer reset
           if(window.confirm('Perform a privileged factory reset? All data will be lost!'))
             Wallace.privilegedFactoryReset()
           break
